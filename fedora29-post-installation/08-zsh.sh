@@ -29,9 +29,19 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 EOF
 fi
 
+if ! grep "^ *zsh-autosuggestions" ~/.zshrc ; then
+  sed -i '/^plugins\=/a \ \ zsh-autosuggestions' ~/.zshrc
+fi
+
+if ! grep "^ *zsh-syntax-highlighting" ~/.zshrc ; then
+  sed -i '/^plugins\=/a \ \ zsh-syntax-highlighting' ~/.zshrc
+fi
+
 # install font
-mkdir -p ~/.local/share/fonts/sauce-code-pro-nerd-font
-wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf -O ~/.local/share/fonts/sauce-code-pro-nerd-font/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf
-sudo fc-cache -v
+if [ ! -d ~/.local/share/fonts/sauce-code-pro-nerd-font ]; then
+  mkdir -p ~/.local/share/fonts/sauce-code-pro-nerd-font
+  wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf -O ~/.local/share/fonts/sauce-code-pro-nerd-font/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf
+  sudo fc-cache -v
+fi
  
 echo 'abra o gnome tweak e defina Fontes > Texto monoespaçado para SauceCodePro Nerd Mono Regular e reinicie o login do usuário'
