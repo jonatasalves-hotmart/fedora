@@ -43,5 +43,7 @@ if [ ! -d ~/.local/share/fonts/sauce-code-pro-nerd-font ]; then
   wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf -O ~/.local/share/fonts/sauce-code-pro-nerd-font/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf
   sudo fc-cache -v
 fi
- 
+
+chsh -s $(which zsh)
+
 echo 'abra o gnome tweak e defina Fontes > Texto monoespaçado para SauceCodePro Nerd Mono Regular e reinicie o login do usuário'
