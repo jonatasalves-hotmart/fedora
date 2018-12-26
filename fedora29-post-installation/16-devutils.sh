@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-sudo dnf -y install python jq dovecot
+sudo dnf -y install python jq dovecot htop
 
