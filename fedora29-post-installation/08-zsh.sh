@@ -29,6 +29,8 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 EOF
 fi
 
+zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
+
 if ! grep "^ *zsh-autosuggestions" ~/.zshrc ; then
   sed -i '/^plugins\=/a \ \ zsh-autosuggestions' ~/.zshrc
 fi
