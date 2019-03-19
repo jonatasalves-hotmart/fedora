@@ -21,8 +21,11 @@ sed -i 's|ZSH_THEME=.*|ZSH_THEME="powerlevel9k/powerlevel9k"|g' ~/.zshrc
 
 if ! grep "POWERLEVEL" ~/.zshrc ; then
   cat <<- EOF >> ~/.zshrc
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir vcs terraform)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
+POWERLEVEL9K_STATUS_SHOW_PIPESTATUS=true
+POWERLEVEL9K_STATUS_HIDE_SIGNAME=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator background_jobs time virtualenv dir vcs terraform)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"

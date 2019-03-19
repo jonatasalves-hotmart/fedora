@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo dnf install snapd
+sudo dnf install -y snapd
