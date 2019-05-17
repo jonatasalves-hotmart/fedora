@@ -1,2 +1,4 @@
 # fedora
-Fedora Installation Scripts.
+Fedora Installation Scripts
+
+Jônatas Alves
